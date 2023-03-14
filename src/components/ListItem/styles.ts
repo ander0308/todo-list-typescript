@@ -12,17 +12,31 @@ export const Container = styled.div(({done}: ContainerProps) => {
         display: flex;
         align-items: center;
         border-radius: 5px;
-        padding: 10px;
+        padding: 18px;
+        justify-content: space-between;
 
-        input {
-            margin-right: 10px;
-            height: 20px;
-            width: 20px;
+        div {
+            display: flex;
+            align-items: center;
+            
+            input {
+                margin-right: 10px;
+                height: 20px;
+                width: 20px;
+            }
+    
+            label {
+                font-size: 20px;
+                text-decoration: ${ done ? 'line-through': 'initial'}
+            }
         }
 
-        label {
-            font-size: 20px;
-            text-decoration: ${ done ? 'line-through': 'initial'}
+        button {
+            display: flex;
+            border: none;
+            padding: 8px;
+            align-self: flex-end;
+            cursor: pointer;
         }
     `
     )

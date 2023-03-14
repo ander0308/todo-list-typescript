@@ -16,7 +16,24 @@ const App = () => {
     { id: 3, name: 'Fazer exercicio', done: false }
   ])
 
-  console.log(list)
+  const handleAddTask = (taskName: string) => {
+    let newList = [...list]
+    newList.push({
+      id: list.length + 1,
+      name: taskName,
+      done: false
+    })
+    setList(newList)
+  }
+
+  const handleRemoveTask = (id: number) => {
+    let newlist = list.filter((item) => {
+      return item.id !== id
+    })
+
+    setList(newlist)
+  }
+
   return (
     <>
       <GlobalStyled />
@@ -24,8 +41,8 @@ const App = () => {
         <S.Content>
           <S.TitleHeader>Todo List</S.TitleHeader>
           
-          <AddItem />
-          {list.map( item => <ListItem key={item.id} item={item} /> )}
+          <AddItem onAddTask={handleAddTask} />
+          {list.map( item => <ListItem key={item.id} item={item} onRemove={handleRemoveTask}/> )}
         </S.Content>
       </S.Container>
     </>
