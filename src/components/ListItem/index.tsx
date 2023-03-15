@@ -1,9 +1,7 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 
 import * as S from './styles'
-import { TodoType } from '../../types/Todo' 
-// import { TaskContext } from '../../contexts/TaskContext'
-
+import { TodoType } from '../../types/Todo'
 
 type PropsItem = {
     item: TodoType
@@ -11,8 +9,6 @@ type PropsItem = {
 }
 
 export const ListItem = ({ item, onRemove }: PropsItem) => {
-
-    // const data = useContext(TaskContext)
     const [ isChecked, setIsChecked ] = useState(item.completed)
 
     const handleRemoveItem = () => {
@@ -22,17 +18,16 @@ export const ListItem = ({ item, onRemove }: PropsItem) => {
     return (
         <S.Container done={isChecked}>
         <div>
-        <input 
-            type="checkbox" 
-            name="name"  
+        <input
+            type="checkbox"
+            name="todo"
+            id={`todo-${item.id}`}
             checked={isChecked}
-            onChange={(event) => {
-                setIsChecked(event.target.checked)
-            }}
+            onChange={() => setIsChecked(!isChecked)}
         />
-        <label htmlFor="name">{item.todo}</label>
+        <label htmlFor={`todo-${item.id}`}>{item.todo}</label>
         </div>
-        <button onClick={handleRemoveItem}>remove</button>
+        <button onClick={handleRemoveItem}>❌</button>
         </S.Container>
     )
 }

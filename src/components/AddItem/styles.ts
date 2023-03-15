@@ -9,7 +9,6 @@ export const Container = styled.div`
     border-radius: 5px;
     border:  1px solid #343a40;
 
-
     input {
         flex: 1;
         padding: 8px;

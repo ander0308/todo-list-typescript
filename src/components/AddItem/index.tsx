@@ -1,7 +1,6 @@
 import { useState, KeyboardEvent } from 'react'
 import * as S from './styles'
 
-
 type Props = {
     onAddTask: (taskName: string) => void
 }
@@ -19,9 +18,9 @@ export const AddItem = ({ onAddTask }: Props) => {
     return(
         <S.Container>
             <div className="icon">➕</div>
-            <input 
-                type="text" 
-                placeholder="Adicione uma Tarefa"
+            <input
+                type="text"
+                placeholder="Adicione uma tarefa e aperte 'Enter'"
                 value={inputText}
                 onChange={(event) => { setInputText(event.target.value)}}
                 onKeyUp={handleKeyUp}

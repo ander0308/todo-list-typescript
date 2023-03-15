@@ -18,25 +18,26 @@ export const Container = styled.div(({done}: ContainerProps) => {
         div {
             display: flex;
             align-items: center;
-            
+
             input {
-                margin-right: 10px;
+                margin-right: 16px;
                 height: 20px;
-                width: 20px;
+                min-width: 20px;
             }
-    
             label {
-                font-size: 20px;
-                text-decoration: ${ done ? 'line-through': 'initial'}
+                font-size: 18px;
+                text-decoration: ${ done ? 'line-through': 'initial'};
             }
         }
 
         button {
             display: flex;
             border: none;
-            padding: 8px;
+            padding: 16px;
             align-self: flex-end;
             cursor: pointer;
+            margin-left: 10px;
+            background: none;
         }
     `
     )
