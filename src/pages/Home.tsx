@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data: dataTodos } = await axios.get(`${baseUrl}?limit=10`);
+      const { data: dataTodos } = await axios.get(`${baseUrl}?limit=3`);
       setTodos(dataTodos.todos);
     };
     getData();
@@ -46,6 +46,7 @@ const Home = () => {
     const newlist = todos.filter((item) => item.id !== id);
 
     setTodos(newlist);
+    toast.info("Tarefa removida!");
   };
 
   return (
