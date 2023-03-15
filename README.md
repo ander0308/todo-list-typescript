@@ -7,6 +7,7 @@
 ## Tecnologias utilizadas
 
 -   ReactJS
+-   React Hooks (useState, useEffect, useContext)
 -   Typescript
 -   Javascript
 -   HTML5
