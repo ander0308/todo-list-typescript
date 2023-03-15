@@ -29,7 +29,7 @@ Clone o repositório
 
 Acesse a pasta do repositório
 
-    cd todo-typescript
+    cd todo-list-typescript
 
 Instale todas as dependências utilizando os comandos
 
