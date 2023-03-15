@@ -37,7 +37,16 @@ export const Container = styled.div(({done}: ContainerProps) => {
             align-self: flex-end;
             cursor: pointer;
             margin-left: 10px;
-            background: none;
+            background-color: transparent;
+            border-radius: 5px;
+            transition: all 0.5s ease-out;
+        }
+        &:hover {
+          button {
+            background-color: #495057;
+            transition: all 0.3s;
+
+          }
         }
     `
     )
