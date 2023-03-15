@@ -16,6 +16,7 @@
 -   Axios
 -   React-Toastify
 -   DummyJSON ( Para consumo de API )
+-   Vite
 
 ## Pré-requisitos
 
