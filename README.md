@@ -1,4 +1,4 @@
-# Todo List - A sua lista de tarefas
+# Todo List
 
 ## Demonstração
 
