@@ -34,7 +34,7 @@ const Home = () => {
       );
 
       const newIdDate = new Date().getTime();
-      setTodos([...todos, { ...dataNewTodo, id: newIdDate }]);
+      setTodos([{ ...dataNewTodo, id: newIdDate }, ...todos]);
       toast.success("Tarefa adicionada com sucesso !");
 
     } catch (error) {
